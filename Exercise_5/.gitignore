@@ -1,0 +1,7 @@
+.idea
+.vscode
+_deps
+cmake-*
+build
+_DS_Store
+*.pdf
