@@ -1,0 +1,16 @@
+random_generator: main.o random_generator.o error_handling.o
+	gcc -o random_generator main.o random_generator.o error_handling.o
+
+main.o: main.c random_generator.h error_handling.h
+	gcc -c main.c
+
+random_generator.o: random_generator.c random_generator.h
+	gcc -c random_generator.c
+
+error_handling.o: error_handling.c error_handling.h
+	gcc -c error_handling.c
+
+.PHONY: clean
+
+clean:
+	rm -f *.o
